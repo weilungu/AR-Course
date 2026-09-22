@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // Awake Values
     Rigidbody rb;
@@ -20,12 +20,6 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
-    {
-        Vector3 movement = new Vector3(moveX, 0f, moveY);
-        rb.AddForce(movement * speed);
-    }
-    
     
     // === Self Method === //
     void OnMove(InputValue values)
@@ -34,4 +28,12 @@ public class PlayerMove : MonoBehaviour
         moveX = moveVectors.x;
         moveY = moveVectors.y;
     } // 偵測 InputSystem 輸入
+
+    
+    // === API === //
+    public void Movement()
+    {
+        Vector3 movement = new Vector3(moveX, 0f, moveY);
+        rb.AddForce(movement * speed);
+    }
 }
