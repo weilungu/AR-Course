@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 620340838}
   - component: {fileID: 620340839}
   - component: {fileID: 620340840}
+  - component: {fileID: 620340841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -911,6 +912,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   speed: 25
+--- !u!114 &620340841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620340833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ef78bc70c210b45a6bb6f812f6f163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickup
+  objTags: []
+  pickupLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
