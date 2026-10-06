@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour
         move.Movement();
     }
     
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pickup"))
-        {
-            other.gameObject.SetActive(false);
-            Destroy(other.gameObject);
-        }
-    }
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.gameObject.CompareTag("Pickup"))
+    //     {
+    //         other.gameObject.SetActive(false);
+    //         Destroy(other.gameObject);
+    //     }
+    // }
 }
