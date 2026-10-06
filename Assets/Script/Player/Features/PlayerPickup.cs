@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
-    [SerializeField] string[] objTags;
-    
+    [SerializeField] LayerMask pickupLayer;
     
     // === Life Cycle === //
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(objTags[0]))
+        bool detectedLayer = (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
+        if (detectedLayer)
         {
-            print($"Picked up {other.gameObject.name}");
+            // print($"picked up: {other.gameObject.name}");
             other.gameObject.SetActive(false);
         }
     }
