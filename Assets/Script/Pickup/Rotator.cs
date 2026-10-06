@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    [SerializeField] Vector3 rotateDirection = Vector3.zero;
+    
     void Update()
     {
-        Vector3 rotate = new Vector3(15f, 30f, 45f);
-        
-        transform.Rotate(rotate * Time.deltaTime);
+        transform.Rotate(rotateDirection * Time.deltaTime);
     }
 }
