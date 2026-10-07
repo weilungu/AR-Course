@@ -3,17 +3,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 { 
-    // Inspector Values
+    // Inspector
     [SerializeField] PlayerPickup pickup;
     [SerializeField] GameUI UI;
 
     
-    // === Life Cycle === //
-    void Update()
-    {
-        IsWin();
-    }
-
     // === Method === //
     public void IsWin()
     {
