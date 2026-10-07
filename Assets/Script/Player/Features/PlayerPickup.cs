@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPickup : MonoBehaviour
 {
@@ -6,15 +7,21 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] LayerMask pickupLayer;
     [SerializeField] int pickupCount;
     
+    [Header("UI")]
+    [SerializeField] GameUI UI;
+    
     
     // === Life Cycle === //
     void OnTriggerEnter(Collider other)
     {
         bool detectedLayer = (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
+        Text scoreText = UI.GetScoreText();
+        
         if (detectedLayer)
         {
-            // print($"picked up: {other.gameObject.name}");
             pickupCount++;
+            scoreText.text = $"Score: {pickupCount}";
+            
             other.gameObject.SetActive(false);
         }
     }

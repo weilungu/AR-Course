@@ -1125,6 +1125,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pickupCount: 0
+  UI: {fileID: 501177639}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
