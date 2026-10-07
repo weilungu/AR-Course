@@ -21,11 +21,11 @@ public class GameUI : MonoBehaviour
     }
 
 
-    void Test()
+    public void Test()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
+            print("click left mouse button");
             scoreText.text = $"score: {count}";
             count++;
         }
