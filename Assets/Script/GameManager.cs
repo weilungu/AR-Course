@@ -3,18 +3,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 { 
-    // Awake Values
-    GameUI UI;
-    
+    // Inspector Values
+    [SerializeField] PlayerPickup pickup;
+    [SerializeField] GameUI UI;
+
     
     // === Life Cycle === //
-    void Awake()
-    {
-        UI = GetComponent<GameUI>();
-    }
-
     void Update()
     {
-        UI.Test();
+        IsWin();
+    }
+
+    // === Method === //
+    public void IsWin()
+    {
+        bool isWin = pickup.GetCount >= 5;
+        UI.GetWinText().gameObject.SetActive(isWin);
     }
 }

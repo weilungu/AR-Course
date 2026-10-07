@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
 {
+    // Inspector Values
     [SerializeField] LayerMask pickupLayer;
     [SerializeField] int pickupCount;
     
