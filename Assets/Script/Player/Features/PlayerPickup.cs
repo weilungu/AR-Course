@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerPickup : MonoBehaviour
 {
     [SerializeField] LayerMask pickupLayer;
+    [SerializeField] int pickupCount;
+    
     
     // === Life Cycle === //
     void OnTriggerEnter(Collider other)
@@ -11,7 +13,16 @@ public class PlayerPickup : MonoBehaviour
         if (detectedLayer)
         {
             // print($"picked up: {other.gameObject.name}");
+            pickupCount++;
             other.gameObject.SetActive(false);
         }
     }
+    
+    
+    // === Self Method === //
+    
+    
+    // === API === //
+    public int ComputeScore() => pickupCount;
+    public int GetCount => pickupCount;
 }
