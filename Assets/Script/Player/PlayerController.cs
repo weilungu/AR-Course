@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        GM.IsWin();
+        GM.WinActions();
     }
 
     void FixedUpdate()

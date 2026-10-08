@@ -5,9 +5,12 @@ public class PlayerPickup : MonoBehaviour
 {
     // Inspector Values
     [SerializeField] LayerMask pickupLayer;
+    
+    [Header("Pickup Settings")]
+    [SerializeField] GameObject pickupContainer;
     [SerializeField] int pickupCount;
     
-    [Header("UI")]
+    [Header("UI Settings")]
     [SerializeField] GameUI UI;
     
     
@@ -31,6 +34,5 @@ public class PlayerPickup : MonoBehaviour
     
     
     // === API === //
-    public int ComputeScore() => pickupCount;
-    public int GetCount => pickupCount;
+    public bool IsFull => pickupCount >= pickupContainer.transform.childCount;
 }

@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 
     
     // === Method === //
-    public void IsWin()
+    public void WinActions()
     {
-        bool isWin = pickup.GetCount >= 5;
+        bool isWin = pickup.IsFull;
         UI.GetWinText().gameObject.SetActive(isWin);
     }
 }
