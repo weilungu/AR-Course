@@ -3,13 +3,17 @@ using UnityEngine.UI;
 
 public class PlayerPickup : MonoBehaviour
 {
-    // Inspector Values
+    // Inspector
     [SerializeField] LayerMask pickupLayer;
-    [SerializeField] int pickupCount;
     
-    [Header("UI")]
+    [Header("Pickup Settings")]
+    [SerializeField] GameObject[] pickupContainers;
+    
+    [Header("UI Settings")]
     [SerializeField] GameUI UI;
     
+    // Private
+    int pickupCount;
     
     // === Life Cycle === //
     void OnTriggerEnter(Collider other)
@@ -31,6 +35,11 @@ public class PlayerPickup : MonoBehaviour
     
     
     // === API === //
-    public int ComputeScore() => pickupCount;
-    public int GetCount => pickupCount;
+    public bool IsFull()
+    {
+        foreach (GameObject container in pickupContainers)
+            return pickupCount >= container.transform.childCount;
+        
+        return false;
+    }
 }
