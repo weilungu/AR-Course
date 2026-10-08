@@ -1124,7 +1124,8 @@ MonoBehaviour:
   pickupLayer:
     serializedVersion: 2
     m_Bits: 64
-  pickupCount: 0
+  pickupContainers:
+  - {fileID: 258309703}
   UI: {fileID: 501177639}
 --- !u!1 &832575517
 GameObject:

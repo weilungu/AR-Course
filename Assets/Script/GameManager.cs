@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     // === Method === //
     public void WinActions()
     {
-        bool isWin = pickup.IsFull;
-        UI.GetWinText().gameObject.SetActive(isWin);
+        GameObject winText = UI.GetWinText().gameObject;
+        
+        bool isWin = pickup.IsFull();
+        winText.SetActive(isWin);
     }
 }
