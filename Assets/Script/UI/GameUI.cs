@@ -10,6 +10,6 @@ public class GameUI : MonoBehaviour
     
 
     // === API === //
-    public Text GetWinText() => winText;
-    public Text GetScoreText() => scoreText;
+    public Text GetWinText => winText;
+    public Text GetScoreText => scoreText;
 }
