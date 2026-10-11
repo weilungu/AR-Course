@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 62fa28cbb204e4546a2ad5c1580ee188
+AssetOrigin:
+  serializedVersion: 1
+  productId: 6722
+  packageName: Snowed Fence
+  packageVersion: 1.0
+  assetPath: Assets/Snowed Fence/FBX/fence_double.FBX
+  uploadId: 27548
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable:
@@ -127,10 +134,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 6722
-  packageName: Snowed Fence
-  packageVersion: 1.0
-  assetPath: Assets/Snowed Fence/FBX/fence_double.FBX
-  uploadId: 27548
