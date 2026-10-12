@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    // Inspector Values
+    // Inspector
     [SerializeField] Text scoreText;
     [SerializeField] Text winText;
     

@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     // Awake
     PlayerMovement move;
-    GameManager GM;
     PlayerPickup pickup;
+    
+    GameManager GM;
     
     
     // === Life Cycle === //
@@ -28,7 +29,8 @@ public class PlayerController : MonoBehaviour
         move.Movement();
     }
     
-    //
+    
+    // Events
     void OnTriggerEnter(Collider other)
     {
         bool layerDetected = pickup.DetextedLayer(other);
