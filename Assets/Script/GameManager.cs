@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        score++;
+        score += amount;
         UI.UpdateScoreUI(score);
     }
 }
