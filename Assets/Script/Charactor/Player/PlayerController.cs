@@ -34,9 +34,22 @@ public class PlayerController : MonoBehaviour
         bool layerDetected = pickup.DetextedLayer(other);
 
         if (!layerDetected) return;
-        pickup.Count++;
-        pickup.UpdateScoreUI(pickup.Count);
+        // pickup.Count++;
+        GM.AddScore(1);
+        
+        // pickup.UpdateScoreUI(pickup.Count);
         
         other.gameObject.SetActive(false);
     }
+    
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.SetActive(false);
+            // Destroy(gameObject);
+            // winText.text = "You Lose!!";
+        }
+    }
+
 }

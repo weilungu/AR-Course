@@ -8,8 +8,14 @@ public class GameUI : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text winText;
     
+    // Private
+    int score;
+    
 
     // === API === //
+    public void UpdateScoreUI(int amount)
+        => scoreText.text = $"Score: {amount}";
+    
     public Text GetWinText => winText;
     public Text GetScoreText => scoreText;
 }
