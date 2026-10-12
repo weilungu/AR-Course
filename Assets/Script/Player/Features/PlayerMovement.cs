@@ -4,13 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Awake Values
+    // Awake
     Rigidbody rb;
     
-    // Inspector Values
+    // Inspector
     [SerializeField] float speed = 1f;
     
-    // Private Values
+    // Private
     float moveX, moveY;
     
     
