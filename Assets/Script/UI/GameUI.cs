@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    // Inspector Values
+    // Inspector
     [SerializeField] Text scoreText;
     [SerializeField] Text winText;
     
 
     // === API === //
+    public void UpdateScoreUI(int amount)
+        => scoreText.text = $"Score: {amount}";
+    
     public Text GetWinText => winText;
-    public Text GetScoreText => scoreText;
 }
