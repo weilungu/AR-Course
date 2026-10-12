@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         bool layerDetected = pickup.DetextedLayer(other);
 
         if (!layerDetected) return;
+        pickup.Count++;
         GM.AddScore(1);
         
         other.gameObject.SetActive(false);
