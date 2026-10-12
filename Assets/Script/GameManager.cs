@@ -6,7 +6,11 @@ public class GameManager : MonoBehaviour
     // Inspector
     [SerializeField] PlayerPickup pickup;
     [SerializeField] GameUI UI;
-
+    
+    
+    // Private
+    int score;
+    
     
     // === Method === //
     public void WinActions()
@@ -15,5 +19,11 @@ public class GameManager : MonoBehaviour
         
         GameObject winText = UI.GetWinText.gameObject;
         winText.SetActive(isWin);
+    }
+
+    public void AddScore(int amount)
+    {
+        score++;
+        UI.UpdateScoreUI(score);
     }
 }

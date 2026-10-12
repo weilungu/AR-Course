@@ -10,6 +10,8 @@ public class GameUI : MonoBehaviour
     
 
     // === API === //
+    public void UpdateScoreUI(int amount)
+        => scoreText.text = $"Score: {amount}";
+    
     public Text GetWinText => winText;
-    public Text GetScoreText => scoreText;
 }

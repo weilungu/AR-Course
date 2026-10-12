@@ -33,6 +33,4 @@ public class PlayerPickup : MonoBehaviour
     }
     public bool DetextedLayer(Collider other)
         => (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
-    public void UpdateScoreUI(int amount)
-        => UI.GetScoreText.text = $"Score: {amount}";
 }
