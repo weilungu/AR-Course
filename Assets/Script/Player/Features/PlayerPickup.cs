@@ -8,7 +8,7 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] LayerMask pickupLayer;
     
     [Header("Pickup Settings")]
-    [SerializeField] GameObject[] pickupContainers;
+    [SerializeField] GameObject pickupContainer;
     
     [Header("Getting UI")]
     [SerializeField] GameUI UI;
@@ -25,12 +25,8 @@ public class PlayerPickup : MonoBehaviour
     }
 
     public bool IsFull()
-    {
-        foreach (GameObject container in pickupContainers)
-            return count >= container.transform.childCount;
-        
-        return false;
-    }
+        => count >= pickupContainer.transform.childCount;
+    
     public bool DetextedLayer(Collider other)
         => (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
 }
