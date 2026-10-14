@@ -5,21 +5,21 @@ public class PickupRotator : MonoBehaviour
 {
     // Inspector
     [SerializeField, Range(-100, 100)]
-    float rotateSpeed = 10f;
+    float rotateVector = 10f;
 
     
     // Private
-    Vector3 rotateDirection;
+    Vector3 direction;
 
     
     // === Life Cycle === //
     void Start()
     {
-        rotateDirection = Vector3.forward * rotateSpeed;
+        direction = Vector3.forward * rotateVector;
     }
 
     void Update()
     {
-        transform.Rotate(rotateDirection * Time.deltaTime);
+        transform.Rotate(direction * Time.deltaTime);
     }
 }
