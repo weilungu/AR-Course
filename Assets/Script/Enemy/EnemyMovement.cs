@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Transform target;
     
     // Private
-    UnityEngine.AI.NavMeshAgent agent;
+    NavMeshAgent agent;
     
     
     // === Life Cycle === //
