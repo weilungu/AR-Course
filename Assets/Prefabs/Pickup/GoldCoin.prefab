@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a7fdf1305fc3446bf3102644c54f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupFloating
-  frequency: 2.08
+  frequency: 3.72
   fluctuation: 0.15
 --- !u!114 &5488786486643915892
 MonoBehaviour:
