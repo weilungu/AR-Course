@@ -15,4 +15,16 @@ public class EnemyMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
+
+    void Update()
+    {
+        Chase();
+    }
+
+    void Chase()
+    {
+        if (target is null) return;
+        
+        agent.SetDestination(target.position);
+    }
 }
