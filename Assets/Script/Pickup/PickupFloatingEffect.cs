@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PickupFloating : MonoBehaviour
+public class PickupFloatingEffect : MonoBehaviour
 {
     // Inspector
     [SerializeField, Range(0f, 5f)] float frequency = 2.5f;
