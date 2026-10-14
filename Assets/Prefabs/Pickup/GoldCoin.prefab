@@ -159,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095e2ece601d5474c9ccdb1c8d926f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotator
-  rotateDirection: {x: 0, y: 0, z: 90}
+  rotateSpeed: 90
