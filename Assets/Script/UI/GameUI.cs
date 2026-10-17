@@ -15,5 +15,5 @@ public class GameUI : MonoBehaviour
     public void UpdateScoreUI(int amount)
         => scoreText.text = $"Score: {amount} / {pickup.Amount}";
     
-    public Text GetOutcomeText => outcomeText;
+    public Text GetOutcomeText() => outcomeText;
 }

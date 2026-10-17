@@ -9,32 +9,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameUI UI;
     
     [Header("Debugger")]
-    [SerializeField] bool isWon;
+    [SerializeField] bool isWin;
     [SerializeField] bool isGameOver;
     
     // Private
     int score;
+    Text outcomeText;
     
     
     // === API === //
     public void OutcomeActions()
     {
-        isWon = IsWon();
+        isWin = IsWin();
         isGameOver = IsGameOver();
-
-        Text outcome = UI.GetOutcomeText;
-        if (isGameOver)
-        {
-            outcome.text = isWon
-                ? "You win!"
-                : "You lose!";
+        outcomeText = UI.GetOutcomeText();
+        
+        if (!isGameOver) return;
+        outcomeText.text = isWin
+            ? "You win!"
+            : "You lose!";
             
-            outcome.gameObject.SetActive(isGameOver);
-        }
-
+        outcomeText.gameObject.SetActive(isGameOver);
     }
 
-    public bool IsWon() => pickup.IsFull();
+    public bool IsWin() => pickup.IsFull();
     public bool IsGameOver() => Input.GetKeyDown(KeyCode.Space);
     public void AddScore(int amount)
     {
