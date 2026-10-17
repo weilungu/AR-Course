@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 { 
     // Inspector
+    [SerializeField] PlayerDetector detector;
     [SerializeField] PlayerPickup pickup;
     [SerializeField] GameUI UI;
     
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     public bool IsWin() => pickup.IsFull();
-    public bool IsGameOver() => Input.GetKeyDown(KeyCode.Space);
+    public bool IsGameOver() => detector.isGameOver;
     public void AddScore(int amount)
     {
         score += amount;
