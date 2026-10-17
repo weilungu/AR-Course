@@ -3,10 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Inspector
-    [SerializeField] Transform target;
-    
-    // Private
+    // Awake
     NavMeshAgent agent;
     
     
@@ -16,12 +13,7 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void Update()
-    {
-        Chase();
-    }
-
-    void Chase()
+    public void Chase(Transform target)
     {
         if (target is null) return;
         

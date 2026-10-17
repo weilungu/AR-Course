@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GM.OutcomeActions();
+        
+        if (GM.IsLose())
+            gameObject.SetActive(false);
     }
     void FixedUpdate()
     {
