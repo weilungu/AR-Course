@@ -10,9 +10,6 @@ public class PlayerPickup : MonoBehaviour
     [Header("Pickup Settings")]
     [SerializeField] GameObject pickupContainer;
     
-    [Header("Getting UI")]
-    [SerializeField] GameUI UI;
-    
     // Private
     int count;
     
