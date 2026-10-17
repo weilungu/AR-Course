@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pickup
   - GameManager
+  - Lose
+  - Enemy
   layers:
   - Default
   - TransparentFX

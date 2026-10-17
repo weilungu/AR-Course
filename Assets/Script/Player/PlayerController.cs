@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        GM.WinActions();
+        GM.OutcomeActions();
     }
     void FixedUpdate()
     {
