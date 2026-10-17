@@ -6,12 +6,14 @@ public class GameUI : MonoBehaviour
 {
     // Inspector
     [SerializeField] Text scoreText;
-    [SerializeField] Text winText;
+    [SerializeField] Text outcomeText;
+    
+    [SerializeField] PlayerPickup pickup;
     
 
     // === API === //
     public void UpdateScoreUI(int amount)
-        => scoreText.text = $"Score: {amount}";
+        => scoreText.text = $"Score: {amount} / {pickup.Amount}";
     
-    public Text GetWinText => winText;
+    public Text GetOutcomeText() => outcomeText;
 }

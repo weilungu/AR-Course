@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4781792031049278020}
   - component: {fileID: 4515141140446477755}
+  - component: {fileID: 536008663270107510}
   - component: {fileID: 5488786486643915892}
   m_Layer: 6
   m_Name: GoldCoin
@@ -147,6 +148,20 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 0.001, z: 0}
+--- !u!114 &536008663270107510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692111626791556342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a7fdf1305fc3446bf3102644c54f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupFloating
+  frequency: 3.72
+  fluctuation: 0.15
 --- !u!114 &5488786486643915892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,4 +174,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095e2ece601d5474c9ccdb1c8d926f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotator
-  rotateDirection: {x: 0, y: 0, z: 90}
+  rotateVector: 90
