@@ -10,7 +10,7 @@ public class PlayerPickup : MonoBehaviour
     [Header("Pickup Settings")]
     [SerializeField] GameObject pickupContainer;
     
-    public int Count;
+    [HideInInspector] public int Count;
     
 
     public bool IsFull()
