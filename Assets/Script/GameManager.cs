@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsWin() => pickup.IsFull();
     public bool IsLose() => isGameOver && !isWin;
-    public bool IsGameOver() => detector.isGameOver;
+    public bool IsGameOver() => isGameOver || detector.isGameOver;
     
     public void AddScore(int amount)
     {
