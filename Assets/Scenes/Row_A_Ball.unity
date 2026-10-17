@@ -1207,6 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameUI
   scoreText: {fileID: 1658715881}
   winText: {fileID: 1584325346}
+  pickup: {fileID: 620340841}
 --- !u!1001 &538722725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1567,7 +1568,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pickupContainer: {fileID: 258309703}
-  UI: {fileID: 0}
+  Count: 0
 --- !u!1001 &634588994
 PrefabInstance:
   m_ObjectHideFlags: 0

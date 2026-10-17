@@ -14,7 +14,9 @@ public class PlayerPickup : MonoBehaviour
     
 
     public bool IsFull()
-        => Count >= pickupContainer.transform.childCount;
+        => Count >= Amount;
+    
+    public int Amount => pickupContainer.transform.childCount;
     
     public bool DetextedLayer(Collider other)
         => (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
