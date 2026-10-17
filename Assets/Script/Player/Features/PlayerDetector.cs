@@ -11,4 +11,10 @@ public class PlayerDetector : MonoBehaviour
     {
         isGameOver = other.CompareTag("Lose");
     }
+    
+
+    void OnCollisionEnter(Collision other)
+    {
+        isGameOver = other.gameObject.CompareTag("Enemy");
+    }
 }
