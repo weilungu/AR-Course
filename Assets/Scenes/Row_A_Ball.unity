@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameUI
   scoreText: {fileID: 1658715881}
-  winText: {fileID: 1584325346}
+  outcomeText: {fileID: 1584325346}
   pickup: {fileID: 620340841}
 --- !u!1001 &538722725
 PrefabInstance:
@@ -2769,6 +2769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   pickup: {fileID: 620340841}
   UI: {fileID: 501177639}
+  isWon: 0
+  isGameOver: 0
 --- !u!1001 &1583300287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2843,7 +2845,7 @@ GameObject:
   - component: {fileID: 1584325347}
   - component: {fileID: 1584325346}
   m_Layer: 5
-  m_Name: WinText
+  m_Name: OutcomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
