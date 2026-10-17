@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
         isWin = IsWin();
         isGameOver = IsGameOver();
         outcomeText = UI.GetOutcomeText();
+
+        if (isWin) isGameOver = true;
         
         if (!isGameOver) return;
         outcomeText.text = isWin
