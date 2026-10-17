@@ -10,19 +10,11 @@ public class PlayerPickup : MonoBehaviour
     [Header("Pickup Settings")]
     [SerializeField] GameObject pickupContainer;
     
-    // Private
-    int count;
+    public int Count;
     
-    
-    // === API === //
-    public int Count
-    {
-        get => count;
-        set => count = value;
-    }
 
     public bool IsFull()
-        => count >= pickupContainer.transform.childCount;
+        => Count >= pickupContainer.transform.childCount;
     
     public bool DetextedLayer(Collider other)
         => (pickupLayer.value & (1 << other.gameObject.layer)) != 0;
